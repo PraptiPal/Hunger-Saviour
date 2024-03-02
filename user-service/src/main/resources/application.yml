@@ -1,0 +1,24 @@
+server:
+  port: 6060
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/hunger_saviour_users?createDatabaseIfNotExist=true
+    username: prapti
+    password: prapti21
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  flyway:
+    baseline-on-migrate: true
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+rsa:
+  public-key: classpath:certs/public.pem
+  private-key: classpath:certs/private.pem
+
